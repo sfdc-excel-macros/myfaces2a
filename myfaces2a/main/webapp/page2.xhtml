@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+    <title>Hello World</title>
+</h:head>
+<h:body>
+    <h:outputStylesheet name="style.css" library="css"/>
+    <div id="container">
+        <h1>page2</h1>
+        <p>
+            <h:outputText value="#{helloWorld.greeting}"/>
+        </p>
+        <p>
+            <h:outputText escape="false" value="#{helloWorld.greeting}"/>       
+        </p>
+        <p>
+            <h:outputText escape="false"
+                value="DB data: #{helloWorld.dbdata}." />        
+        </p>
+        <p>
+            <h:outputText
+                value="DB data: #{helloWorld.dbdata}." />
+        </p>
+        <p>
+            <h:outputText escape="false"
+                value="Hello #{helloWorld.name}. We hope you enjoy Apache MyFaces" />        
+        </p>
+        <p>
+            <h:outputText escape="true" value="Hello #{helloWorld.name}. We hope you enjoy Apache MyFaces" />
+        </p>
+        <p>
+            <h:outputText value="Hello #{helloWorld.name}. We hope you enjoy Apache MyFaces" />
+        </p>
+        <p>
+        <h:outputText escape="false"
+            value="Hello #{helloWorld.safe}. We hope you enjoy Apache MyFaces" />
+        </p>
+        <h:link value="Home" outcome="helloWorld"/>
+    </div>
+</h:body>
+</html>
